@@ -20,7 +20,7 @@ import {
 } from "@components";
 import { formatDate, getFullName } from "@helpers";
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+// eslint-disable-next-line
 export const getStaticProps = async () => {
   const CMS = getCMSIntegration();
   const personalInformation = await CMS.getPersonalInformation();

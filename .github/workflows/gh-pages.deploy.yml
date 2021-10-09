@@ -33,6 +33,14 @@ jobs:
         run: npm run export
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
+      - name: html to pdf
+        uses: misaelnieto/web_to_pdf_action@master
+        with:
+          webPageURL: https://xenotime-india.github.io/resume/
+          outputFile: resume.pdf
+          usePuppeteer: true
+          useScreen: true
+          pdfOptions: '{"format": "Letter", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:

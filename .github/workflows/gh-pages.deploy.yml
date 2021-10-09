@@ -37,7 +37,7 @@ jobs:
         uses: misaelnieto/web_to_pdf_action@master
         with:
           webPageURL: https://xenotime-india.github.io/resume/
-          outputFile: resume.pdf
+          outputFile: ./out/CV_SANDEEP_KUMAR.pdf
           usePuppeteer: true
           useScreen: true
           pdfOptions: '{"format": "Letter", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'

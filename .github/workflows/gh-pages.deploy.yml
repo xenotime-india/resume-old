@@ -3,8 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  repository_dispatch:
-    types: [custom_event_type]
+  repository_dispatch
 
 jobs:
   build:

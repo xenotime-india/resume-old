@@ -6,7 +6,7 @@
     "build": "next build",
     "develop": "next dev",
     "export": "next export",
-    "format": "prettier --write 'src/**/*.{json,js,jsx}'",
+    "format": "prettier --write './**/*.{json,js,jsx, json}'",
     "lint": "npm run lint:js && npm run lint:styles",
     "lint:js": "eslint ./src --ext js --ext jsx --fix",
     "lint:styles": "stylelint 'src/styles/**/*.scss' --fix",

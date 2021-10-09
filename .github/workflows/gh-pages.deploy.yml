@@ -36,11 +36,11 @@ jobs:
       - name: html to pdf
         uses: misaelnieto/web_to_pdf_action@master
         with:
-          webPageURL: https://xenotime-india.github.io/resume/
+          webPageURL: https://xenotime-india.github.io/resume/pdf
           outputFile: ./out/CV_SANDEEP_KUMAR.pdf
           usePuppeteer: true
-          useScreen: true
-          pdfOptions: '{"format": "Letter", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+          useScreen: false
+          pdfOptions: '{"displayHeaderFooter":false,"format":"letter","landscape":false,"margin":{"bottom":0,"left":0,"right":0,"top":0},"preferCSSPageSize":false,"printBackground":true,"scale":1}'
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:

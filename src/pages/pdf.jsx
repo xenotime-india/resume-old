@@ -27,13 +27,14 @@ export const getStaticProps = async () => {
   const professionalExperiences = await CMS.getProfessionalExperiences();
   const educationalExperiences = await CMS.getEducationalExperiences();
   const skills = await CMS.getSkills();
-
+  const links = await CMS.getLinks();
   return {
     props: {
       educationalExperiences,
       personalInformation,
       professionalExperiences,
       skills,
+      links,
     },
     revalidate: 60,
   };
@@ -45,6 +46,7 @@ const ResumePage = (props) => {
     personalInformation,
     professionalExperiences,
     skills,
+    links,
   } = props;
   const fullName = getFullName(personalInformation);
   const jobTitle = indefinite(personalInformation.job_title);
@@ -69,7 +71,11 @@ const ResumePage = (props) => {
               />
             </div>
             <div className="mt-xs" />
-            <ContactInformation personalInformation={personalInformation} pdf />
+            <ContactInformation
+              personalInformation={personalInformation}
+              links={links}
+              pdf
+            />
             <Skills skills={skills} pdf />
           </Section>
         </div>

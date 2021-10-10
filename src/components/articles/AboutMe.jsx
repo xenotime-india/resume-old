@@ -4,12 +4,13 @@ import { getCMSIntegration } from "@cms";
 import { SectionHeader } from "@components/sectionHeader";
 
 export const AboutMe = (props) => {
-  const { personalInformation } = props;
+  const { personalInformation, pdf } = props;
   const CMS = getCMSIntegration();
 
   return (
     <article>
-      <SectionHeader icon={faUser} text="About Me" />
+      {!pdf && <SectionHeader icon={faUser} text="About Me" />}
+
       <CMS.RichTextComponent
         richText={personalInformation.about_me_description}
       />

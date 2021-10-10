@@ -61,7 +61,11 @@ const ResumePage = (props) => {
         title={`Résumé | ${fullName} | ${personalInformation.location}`}
       />
 
-      <Header subtitle={personalInformation.job_title} title={fullName} />
+      <Header
+        subtitle={personalInformation.job_title}
+        title={fullName}
+        profilePic={personalInformation.profile_pic}
+      />
       <Section color="white">
         <div className="row">
           <div className="col-md">
@@ -76,7 +80,7 @@ const ResumePage = (props) => {
       </Section>
 
       <Section color="light">
-        <SectionHeader icon={faBriefcase} text="Professional Experience" />
+        <SectionHeader icon={faBriefcase} text="Professional Experience" dark />
         {professionalExperiences.map((experience) => (
           <ProfessionalItem
             end_date={

@@ -60,20 +60,29 @@ const ResumePage = (props) => {
 
       <div className={styles.pdfLayout}>
         <div className={styles.pdfSidebar}>
-          <Header
-            pdf
-            subtitle={personalInformation.job_title}
-            title={fullName}
-          />
           <Section color="light" pdf>
-            <AboutMe personalInformation={personalInformation} />
+            <div className="text-center">
+              <img
+                src={personalInformation.profile_pic.url}
+                alt="user-pic"
+                className="img-thumbnail rounded-circle"
+              />
+            </div>
             <div className="mt-xs" />
-            <ContactInformation personalInformation={personalInformation} />
-            <Skills skills={skills} />
+            <ContactInformation personalInformation={personalInformation} pdf />
+            <Skills skills={skills} pdf />
           </Section>
         </div>
 
         <div className={styles.pdfMain}>
+          <Section color="primary" pdf>
+            <Header
+              pdf
+              subtitle={personalInformation.job_title}
+              title={fullName}
+            />
+            <AboutMe personalInformation={personalInformation} pdf />
+          </Section>
           <Section color="white" pdf>
             <SectionHeader icon={faBriefcase} text="Professional Experience" />
             {professionalExperiences.map((experience) => (

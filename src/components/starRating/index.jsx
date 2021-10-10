@@ -8,12 +8,20 @@ export const StarRating = (props) => {
 
   return (
     <span className="text-primary">
-      {stars >= 3 && <FontAwesomeIcon icon={faStar} />}
+      {stars >= 3 && <FontAwesomeIcon color="#4679bd" icon={faStar} />}
       {stars >= 2 && (
-        <FontAwesomeIcon className={styles.secondStar} icon={faStar} />
+        <FontAwesomeIcon
+          color="#4679bd"
+          className={styles.secondStar}
+          icon={faStar}
+        />
       )}
       {stars >= 1 && (
-        <FontAwesomeIcon className={styles.thirdStar} icon={faStar} />
+        <FontAwesomeIcon
+          color="#4679bd"
+          className={styles.thirdStar}
+          icon={faStar}
+        />
       )}
     </span>
   );

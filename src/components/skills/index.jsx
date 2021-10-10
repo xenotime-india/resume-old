@@ -6,11 +6,12 @@ import { SectionHeader } from "@components/sectionHeader";
 import { StarRating } from "@components/starRating";
 
 export const Skills = (props) => {
-  const { skills } = props;
+  const { skills, pdf = false } = props;
 
   return (
     <article className="mt-xs">
-      <SectionHeader icon={faCheck} text="Skills & Expertise" />
+      {pdf && <SectionHeader text="Skills" dark />}
+      {!pdf && <SectionHeader icon={faCheck} text="Skills & Expertise" />}
       <div className="row mt-xxs">
         {skills.map((skill, index) => (
           <div

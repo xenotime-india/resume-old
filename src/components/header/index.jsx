@@ -5,7 +5,7 @@ import React from "react";
 import styles from "./Header.module.scss";
 
 export const Header = (props) => {
-  const { pdf = false, secret, subtitle, title } = props;
+  const { pdf = false, secret, subtitle, title, profilePic = {} } = props;
 
   let pdfAPI = "/api/pdf";
   if (secret) {
@@ -13,17 +13,30 @@ export const Header = (props) => {
   }
 
   return (
-    <header className={styles.header}>
-      <div className={pdf ? "container-fluid" : "container"}>
+    <header className={pdf ? styles.headerPdf : styles.header}>
+      <div className={pdf ? "" : "container"}>
         <div
           className={classnames("row align-items-center", {
-            "text-center": pdf,
             "text-md-start text-center": !pdf,
           })}
         >
+          {!pdf && (
+            <div className="col-md-2">
+              <img
+                src={profilePic.url}
+                alt="user-pic"
+                className="img-thumbnail rounded-circle"
+              />
+            </div>
+          )}
           <div className="col-md">
-            <h1 className="text-white">{title}</h1>
-            <h2 className="text-white mb-0">{subtitle}</h2>
+            <h1 className={classnames("text-white", styles.userName)}>
+              {title}
+            </h1>
+            <h5 className={classnames("text-white mb-0", styles.subHeading)}>
+              {subtitle}
+            </h5>
+            <div className="half-line" />
           </div>
           {!pdf && (
             <div className="col-md-auto mt-md-0 mt-xxs d-print-none d-block">

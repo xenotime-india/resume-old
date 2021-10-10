@@ -1,6 +1,8 @@
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import classNames from "classnames";
+import styles from "./ProfessionalItem.module.scss";
 
 export const ProfessionalItem = (props) => {
   const {
@@ -14,13 +16,15 @@ export const ProfessionalItem = (props) => {
   } = props;
 
   return (
-    <article className={pdf ? "mt-xxs" : "mt-xs"}>
-      <h4 className="d-inline-block">
-        <span className="bg-dark px-xxxs text-white rounded">
-          {position_title}
-        </span>{" "}
-        at {organization_name}
-      </h4>
+    <article
+      className={classNames(pdf ? "mt-xxs" : "mt-xs", styles.professionalItem)}
+    >
+      <h5 className={styles.designation}>
+        <span>{position_title}</span>
+      </h5>
+      <h6 className={styles.organization}>
+        <span>{organization_name}</span>
+      </h6>
       <div>
         <FontAwesomeIcon className="me-xxxs" icon={faCalendar} />
         {start_date}–{is_current ? "Current" : end_date}

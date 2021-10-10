@@ -62,10 +62,6 @@ const ResumePage = (props) => {
       />
 
       <Header subtitle={personalInformation.job_title} title={fullName} />
-      <div className="row">
-        <div className="col-sm-2">One of three columns</div>
-        <div className="col-sm">One of three columns</div>
-      </div>
       <Section color="white">
         <div className="row">
           <div className="col-md">

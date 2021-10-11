@@ -140,7 +140,10 @@ const ResumePage = (props) => {
 
             <div className="mt-xs" />
 
-            <HobbiesAndInterests personalInformation={personalInformation} />
+            <HobbiesAndInterests
+              personalInformation={personalInformation}
+              pdf
+            />
           </Section>
         </div>
       </div>

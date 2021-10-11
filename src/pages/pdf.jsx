@@ -81,7 +81,7 @@ const ResumePage = (props) => {
               pdf
             />
             <Skills skills={skills} pdf />
-            <div style={{ height: 230 }} />
+            <div style={{ height: 250 }} />
             <Certifications certifications={certifications} pdf />
           </Section>
         </div>

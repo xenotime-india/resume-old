@@ -5,12 +5,9 @@ import React from "react";
 import styles from "./Header.module.scss";
 
 export const Header = (props) => {
-  const { pdf = false, secret, subtitle, title, profilePic = {} } = props;
+  const { pdf = false, subtitle, title, profilePic = {} } = props;
 
-  let pdfAPI = "/api/pdf";
-  if (secret) {
-    pdfAPI += `?secret=${secret}`;
-  }
+  let pdfAPI = "/resume/CV_SANDEEP_KUMAR.pdf";
 
   return (
     <header className={pdf ? styles.headerPdf : styles.header}>

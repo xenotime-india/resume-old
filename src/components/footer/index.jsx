@@ -73,16 +73,7 @@ export const Footer = (props) => {
             >
               Vercel
             </a>
-            . Learn how to deploy your own resume with the{" "}
-            <a
-              className={styles.footerLink}
-              href="https://github.com/colinhemphill/nextjs-resume-generator"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              nextjs-resume-generator
-            </a>
-            !
+            .
           </small>
         </div>
       </div>

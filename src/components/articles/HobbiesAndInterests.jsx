@@ -9,7 +9,7 @@ export const HobbiesAndInterests = (props) => {
 
   return (
     <article>
-      <SectionHeader icon={faDiceD20} text="Hobbies & Interests" />
+      <SectionHeader icon={faDiceD20} text="Hobbies & Interests" dark />
       <CMS.RichTextComponent
         richText={personalInformation.hobbies_and_interests}
       />

@@ -17,7 +17,11 @@ export const ProfessionalItem = (props) => {
 
   return (
     <article
-      className={classNames(pdf ? "mt-xxs" : "mt-xs", styles.professionalItem)}
+      className={classNames(
+        "professional-item",
+        pdf ? "mt-xxs" : "mt-xs",
+        styles.professionalItem,
+      )}
     >
       <h5 className={styles.designation}>
         <span>{position_title}</span>

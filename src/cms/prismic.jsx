@@ -68,6 +68,20 @@ export const prismicGetSkills = async () => {
   );
   return skills;
 };
+
+export const prismicGetCertifications = async () => {
+  const document = await cmsClient().query(
+    prismic.Predicates.at("document.type", "certification"),
+    {
+      orderings: "[my.certification.sequence]",
+    },
+  );
+  const certifications = document.results.map((document) =>
+    Object.assign({ id: document.id }, document.data),
+  );
+  return certifications;
+};
+
 export const prismicGetLinks = async () => {
   const document = await cmsClient().query(
     prismic.Predicates.at("document.type", "link"),

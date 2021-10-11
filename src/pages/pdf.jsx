@@ -16,6 +16,7 @@ import {
   Section,
   SectionHeader,
   Skills,
+  Certifications,
 } from "@components";
 import { formatDate, getFullName } from "@helpers";
 import styles from "@styles/pdf.module.scss";
@@ -28,6 +29,7 @@ export const getStaticProps = async () => {
   const educationalExperiences = await CMS.getEducationalExperiences();
   const skills = await CMS.getSkills();
   const links = await CMS.getLinks();
+  const certifications = await CMS.getCertifications();
   return {
     props: {
       educationalExperiences,
@@ -35,6 +37,7 @@ export const getStaticProps = async () => {
       professionalExperiences,
       skills,
       links,
+      certifications,
     },
     revalidate: 60,
   };
@@ -47,6 +50,7 @@ const ResumePage = (props) => {
     professionalExperiences,
     skills,
     links,
+    certifications,
   } = props;
   const fullName = getFullName(personalInformation);
   const jobTitle = indefinite(personalInformation.job_title);
@@ -77,6 +81,8 @@ const ResumePage = (props) => {
               pdf
             />
             <Skills skills={skills} pdf />
+            <div style={{ height: 230 }} />
+            <Certifications certifications={certifications} pdf />
           </Section>
         </div>
 

@@ -12,7 +12,7 @@ export const Skills = (props) => {
     <article className="mt-xs">
       {pdf && <SectionHeader text="Skills" dark />}
       {!pdf && <SectionHeader icon={faCheck} text="Skills & Expertise" />}
-      <div className="row mt-xxs">
+      <div className="row my-xxs">
         {skills.map((skill, index) => (
           <div
             className={classnames("col-lg", {

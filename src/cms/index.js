@@ -9,6 +9,7 @@ import {
   prismicGetSkills,
   prismicParseDate,
   PrismicRichTextComponent,
+  prismicGetCertifications,
 } from "./prismic";
 
 export const apiEndpoint = process.env.CMS_ENDPOINT;
@@ -23,6 +24,7 @@ export const getCMSIntegration = () => {
     getPrivateInformation: prismicGetPrivateInformation,
     getProfessionalExperiences: prismicGetProfessionalExperiences,
     getSkills: prismicGetSkills,
+    getCertifications: prismicGetCertifications,
     link: prismicCMSLink,
     name: prismicCMSName,
     parseDate: prismicParseDate,

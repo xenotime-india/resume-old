@@ -20,7 +20,7 @@ export const ContactInformation = (props) => {
       {!pdf && <SectionHeader icon={faIdCard} text="Contact Information" />}
       <ul className="list-unstyled">
         <li>
-          <div className="row mt-md-0 mt-xxxs">
+          <div className="row mt-md-0 my-xxxs">
             <div className="col-lg-3 col-sm-1">
               {pdf && (
                 <span className={classNames("fa-layers fa-lg")}>
@@ -47,7 +47,7 @@ export const ContactInformation = (props) => {
           </div>
         </li>
         <li>
-          <div className="row mt-md-0 mt-xxxs">
+          <div className="row mt-md-0 my-xxxs">
             <div className="col-lg-3 col-sm-1">
               {pdf && (
                 <span className={classNames("fa-layers fa-lg")}>

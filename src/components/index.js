@@ -7,3 +7,4 @@ export { Section } from "./section";
 export { AboutMe, ContactInformation, HobbiesAndInterests } from "./articles";
 export { SectionHeader } from "./sectionHeader";
 export { Skills } from "./skills";
+export { Certifications } from "./certifications";

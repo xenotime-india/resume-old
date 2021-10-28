@@ -4,7 +4,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import styles from "./Certifications.module.scss";
+import Styles from "./Certifications.module.scss";
 import { SectionHeader } from "@components/sectionHeader";
 
 export const Certifications = (props) => {
@@ -15,7 +15,7 @@ export const Certifications = (props) => {
       <li key={certificate.title} className="my-xxs">
         <div className="row mt-md-0 mt-xxxs no-paragraph-margins">
           <div className="col-lg-2 col-sm-1">
-            <span className={classNames("fa-layers fa-lg")}>
+            <span className={classNames("fa-layers fa-lg", Styles.layer)}>
               <FontAwesomeIcon icon={faCircle} color="#4679bd" />
               <FontAwesomeIcon
                 color="white"
